@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <string.h>
+struct details 
+{int emp_no ;
+ char emp_name[20];
+ long int emp_phone_no ;
+ int age;
+ int emp_salary;};
+ 
+int main()
+{ int a, n ;
+  printf("No. of total employees - ");
+  scanf("%d", &n);
+
+    struct details e[20] ;
+       for (a=1;a<=n;a++) 
+	 {printf("Employe no. - ");
+	  scanf("%d", &e[a].emp_no);
+	  printf("Employe name - ");
+          scanf("%s", &e[a].emp_name);
+          printf("Employe phone no. - ");
+          scanf("%ld", &e[a].emp_phone_no);
+          printf("Employe age - ");
+          scanf("%d", &e[a].age);
+          printf("Employe salary - ");
+	  scanf("%d", &e[a].emp_salary);
+	  printf("\n");}
+   
+// required output    
+printf("\ns.no   name     phone no.     age    salary\n");
+for (a=1;a<=n;a++) 
+ {printf("%d     %s   %ld    %d    %d\n",e[a].emp_no,e[a].emp_name,e[a].emp_phone_no,e[a].age,e[a].emp_salary);}
+ return 0;}
